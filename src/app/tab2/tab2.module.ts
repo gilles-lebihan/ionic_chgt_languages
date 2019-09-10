@@ -27,4 +27,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   declarations: [Tab2Page]
 })
-export class Tab2PageModule {}
+export class Tab2PageModule {
+  constructor() {console.log("GLB constructor Tab2PageModule ")}
+}

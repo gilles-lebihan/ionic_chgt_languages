@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Globalization } from '@ionic-native/globalization/ngx';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -13,16 +12,18 @@ export class Tab1Page {
   public description: string;
   public name: string;
   public language: string;
-  constructor(private globalization: Globalization, private _translate: TranslateService) {
-
+  constructor(private _translate: TranslateService) {
+    console.log("GLB constructor Tab1Page ");
   }
 
   ionViewDidEnter(): void {
-    console.log('challa?')
-    this.getDeviceLanguage()
+    console.log('challa?');
+    this._initTranslate();
+   // this.getDeviceLanguage()
   }
 
   _initialiseTranslation(): void {
+    console.log("GLB _initialiseTranslation Tab1Page ");
     this._translate.get('TITLE').subscribe((res: string) => {
       console.log(res);
       this.title = res;
@@ -43,6 +44,7 @@ export class Tab1Page {
   }
 
   public changeLanguage(): void {
+    console.log("GLB changeLanguage Tab1Page ");
     this._translateLanguage();
   }
 
@@ -53,6 +55,7 @@ export class Tab1Page {
   }
 
   _initTranslate() {
+    console.log("GLB _initTranslate Tab1Page ");
     // Set the default language for translation strings, and the current language.
     this._translate.setDefaultLang('en');
 
@@ -68,12 +71,4 @@ export class Tab1Page {
     this._translateLanguage();
   }
 
-  getDeviceLanguage() {
-    this.globalization.getPreferredLanguage()
-      .then(res => {
-        console.log(res)
-        this._initTranslate()
-      })
-      .catch(e => console.log(e));
-  }
 }

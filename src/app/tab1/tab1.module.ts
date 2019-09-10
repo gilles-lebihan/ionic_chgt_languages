@@ -28,4 +28,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   declarations: [Tab1Page]
 })
-export class Tab1PageModule { }
+export class Tab1PageModule {
+  constructor() {console.log("GLB constructor Tab1PageModule ")}
+ }

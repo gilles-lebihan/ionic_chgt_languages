@@ -1,4 +1,4 @@
-# ionic-i18n
+# ionic_chgt_languages
 
 Step by step instructions to implement translation services in Ionic 4 app are provided at 
 
@@ -21,3 +21,4 @@ https://enappd.com/blog/how-to-translate-in-ionic-4-globalization-internationali
 - Create an app store with countless number of App starters with production quality
 - Create an open marketplace for every developer to share their starters for others - Free or Paid
 - Create awesome SaaS products and apps to drastically reduce the time required to create an app from scratch
+=======

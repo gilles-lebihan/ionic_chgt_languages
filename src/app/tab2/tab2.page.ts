@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Globalization } from '@ionic-native/globalization/ngx';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -12,7 +11,8 @@ export class Tab2Page {
   public title_2: string;
   public description: string;
   public language: string;
-  constructor(private globalization: Globalization, private _translate: TranslateService) {
+  constructor(private _translate: TranslateService) {
+    console.log("GLB constructor Tab2Page ");
     _translate.setTranslation('en', {
       "TITLE": "Bye sir",
       "TITLE_2": "Bye {{value}}",
@@ -76,10 +76,11 @@ export class Tab2Page {
 
     this._translateLanguage();
   }
-
+/*
   getDeviceLanguage() {
     this.globalization.getPreferredLanguage()
       .then(res => console.log(res))
       .catch(e => console.log(e));
   }
+*/  
 }
